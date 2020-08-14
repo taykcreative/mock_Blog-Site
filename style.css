@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+#linkedin {
+    width: 1cm;
+    opacity: 0.5;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #fff;
+    background-image: url(https://cdn.pixabay.com/photo/2016/09/05/15/07/concrete-1646788_640.jpg);
+    background-position: stretch;
+    font-family: "raleway", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    width: 100%;
+    border: #858585 2px solid;
+    margin: 50px auto;
+/*Grid Rules*/
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 75px 30px 1fr 50px;
+    grid-template-areas: 'hd subhd'
+                        'nav nav'
+                        'blg side'
+                        'navbot navbot';
+}
+
+.container div{
+    border: rgba(255, 255, 255, 0) 1px solid;
+}
+
+
+/* HEADER */
+
+/*.header {
+    grid-area: hd;
+}*/
+
+.header h1{ /*HTMLmom*/
+    grid-area: hd;
+    margin: auto;
+    color: #8b3f00;
+    font-size: 65px;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+}
+
+.sub-head h2{ /*My Journey to Tech*/
+    grid-area: subhd;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 50px;
+    margin: auto;
+}
+
+
+/* NAVIGATION */
+.nav-top {
+    grid-area: nav;
+    background-color: #a74b00;
+    font-size: 16px;
+    border: 1px outset #7a3700;
+}
+
+ul{
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style-type: none;
+    margin-top: 3.6px;
+}
+
+#nav-top li{
+    display: inline-block;
+    width: 15%;
+    border-right: rgb(255, 255, 255) 1px solid;
+    padding: 0;
+    list-style: none;
+}
+
+#nav-top {
+    text-align: center;
+    padding: 0;
+}
+
+#nav-top a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+#nav-top a:hover {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#nav-top li:last-child {
+    border-right: none;
+}
+
+
+/* LINKS */
+a {
+    text-decoration: none;
+    color: #a74b00;
+    text-align: center;
+}
+/* LEFT COLUMN */
+
+.col-1 {
+    grid-area: blg;
+    justify-self: center;
+    text-align: center;
+}
+
+.date {
+    color: #fff;
+    background-color: #858585 ;
+    border-radius: 0 0 5px 5px;
+    border-top: #757575 2px solid;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    padding: 5px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blog-title {
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+/* BLOG IMAGES */
+img {
+    padding-top: 5px;
+    margin: auto;
+    width: 85%;
+}
+
+/*BLOG CONTENT*/
+p { 
+    text-indent: 25px;
+    text-align: left;
+}
+
+.read-more {
+    text-align: right;
+    font-weight: bold;
+}
+
+.col-2 {
+    grid-area: side;
+
+}
+
+.img4 {
+    display: grid;
+}
+
+.us {
+    border-radius: 30px 30px;
+    max-width: 225px;
+    min-width: 100px;
+    padding-bottom: 10px;
+    opacity: .75;
+}
+
+.us:hover {
+    opacity: 1;
+}
+
+#side-nav {
+    font-size: 16px;
+    text-align: right;
+    display: grid;
+}
+
+#side-nav:hover {
+    color: #444;
+}
+
+.sidebar-title {
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.sidebar-body {
+    color: #444;
+    font-size: 16px;
+    text-indent: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p.sidebar-body {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.nav-bot {
+    grid-area: navbot;
+}
+
+#footer-nav {
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+    border-top: #858585 1px solid;
+}
+
+#footer-nav li{
+    list-style: none;
+    border-right: #d1d1d1 1.5px solid;
+    padding: 0 20px;
+    display: inline-block;
+    margin-top: 5px;
+    width: 10%;
+}
+
+#footer-nav li:last-child {
+    border: none;
+}
+
+footer {
+    text-align: center;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+
+@media only screen and (max-width: 750px) {
+    .container {
+    /*Grid Rules*/
+        min-width: 520px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 75px 20px 30px auto auto 50px;
+        grid-template-areas: 'hd' 
+                            'subhd'
+                            'nav'
+                            'blg'
+                            'side'
+                            'navbot';
+        justify-content: center;
+        align-content: center;
+    }
+
+    .header h1{ /*HTMLmom*/
+        margin: auto;
+        text-align: center;
+        grid-area: hd;
+    }
+    
+    .sub-head h2{ /*My Journey to Tech*/
+        grid-area: subhd;
+        text-align: center;
+        margin-top:-60px;
+    }
+
+    .sidebar-title {
+        text-align: center;
+        text-justify: center;
+        padding-top: 20px;
+    }
+
+    #about {
+        display: grid;
+        float: left;
+        margin: auto;
+    }
+
+    #pop {
+        display: grid;
+        float: right;
+        padding-right: 30px;
+    }
+
+    .us {
+        opacity: 1;
+    }
+
+
+}
