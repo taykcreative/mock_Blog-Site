@@ -1,3 +1,1 @@
-var name = prompt("What is your name?");
-var ans = prompt("Hello, " + name + ". How are you doing?");
-alert("That's " + ans + " to hear!");
+alert("This project is a space-filler and does not reflect my current knowledge.");
